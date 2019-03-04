@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements Keys {
 
 
 
-
     public void collectAnimalInfo (View view){
 
         String aName = animalName.getText().toString();
@@ -46,15 +45,11 @@ public class MainActivity extends AppCompatActivity implements Keys {
         } else {
             animalHasFur = false;
         }
+
         String aMoreInfo = moreInfo.getText().toString();
 
         Intent intent = new Intent(this, SecondActivity.class);
 
-        /*intent.putExtra(Keys.NAME,aName);
-        intent.putExtra(Keys.LEGS,legNumbers);
-        intent.putExtra(Keys.FUR,animalHasFur);
-        intent.putExtra(Keys.MOREINFO,aMoreInfo);
-*/
         Animal animal = new Animal(aName,legNumbers,animalHasFur,aMoreInfo);
         Bundle bundle = new Bundle();
         bundle.putSerializable(Keys.ANIMAL,animal);

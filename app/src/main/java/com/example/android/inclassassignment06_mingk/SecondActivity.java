@@ -16,9 +16,6 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-
-
-
         Animal a = (Animal)intent.getSerializableExtra(Keys.ANIMAL);
 
         String animal = a.getName();
